@@ -11,17 +11,15 @@ export default function App() {
   return (
     <ThemeProvider theme={themeObj}>
       <LazyMotion features={domAnimation}>
-
         <>
           <Suspense fallback={<p>Loading</p>}>
             <Switch location={location} key={location.pathname}>
-              <Route exact path="/">
+              <Route exact path='/'>
                 <div>Hello World</div>
               </Route>
             </Switch>
           </Suspense>
         </>
-
       </LazyMotion>
     </ThemeProvider>
   );
