@@ -1,4 +1,5 @@
-import themeObj from '../context/theme';
+import themeObj from './context/theme';
+import CreditCardPage from './challenges/02/index';
 
 import { Suspense } from 'react';
 import { ThemeProvider } from 'styled-components';
@@ -15,7 +16,7 @@ export default function App() {
           <Suspense fallback={<p>Loading</p>}>
             <Switch location={location} key={location.pathname}>
               <Route exact path='/'>
-                <div>Hello World</div>
+                <CreditCardPage />
               </Route>
             </Switch>
           </Suspense>
